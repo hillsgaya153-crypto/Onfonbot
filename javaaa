@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="hello()">Hello</button>
+<button onclick="count()">Count</button>
+
+</body>
+<script>
+    function hello(){
+          if (document.querySelector("title").innerHTML === "<h1>Hello World</h1>") {
+            document.querySelector("title").innerHTML = "Hello World";
+          } else {
+            document.querySelector("title").innerHTML = "Hello";
+          }
+    } 
+
+    let counter = 0;
+
+    function count (){
+        counter++;
+        alert(counter);
+    }
+
+
+</script>    
+</html>
