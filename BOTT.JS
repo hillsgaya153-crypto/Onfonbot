@@ -155,7 +155,7 @@ function fmtDate(d) {
   return isNaN(dt) ? "" : dt.toLocaleDateString([], { day: "numeric", month: "short", year: "numeric" });
 }
 
-// Kenyan phone (07XXXXXXXX / 01XXXXXXXX) or a 6-10 digit national ID
+// Kenyan phone (07XXXXXXXX / 01XXXXXXXX) or a 6-10 digiit ID number. No spaces or punctuation allowed.
 function isValidIdentifier(value) {
   const v = value.trim();
   return /^0[17]\d{8}$/.test(v) || /^\d{6,10}$/.test(v);
@@ -184,7 +184,7 @@ function hideTyping() {
 // ---------- FLOW ----------
 function startFlow() {
   addDaySeparator("TODAY");
-  addBubble("Hi 👋 Welcome to Onfon Loan Assist.\nTo get started, please enter your registered ID number or phone number.", "bot");
+  addBubble("Hi welcome to Onfon mobile i am your virtual assistant.\nTo get started, please enter your registered ID number or phone number.", "bot");
   session.step = "awaiting_id";
   setInputMode("id");
 }
